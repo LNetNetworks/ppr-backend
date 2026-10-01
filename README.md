@@ -328,3 +328,23 @@ the database on the person's next login.
   a deterministic identifier.
 - **Queue**: the worker runs in every replica. Set `SYNC_WORKER_ENABLED=false`
   on the ones that should only serve the API.
+
+## Technical Debt
+
+**Missing Back Office**
+
+The platform currently has no administration Back Office. That module is where
+organizations, along with their own configuration, and the catalogs of phases
+(stages) and tasks should be created. The platform would then only select them
+and add them to each project.
+
+Since it does not exist, these functions are handled through the same endpoints
+as the operational platform, without an administrator role to control them. As a
+temporary solution, part of the configuration, such as the blockchain network,
+contracts, tokens and external integrations, was moved to environment variables.
+That configuration is global to the whole instance rather than per organization,
+and any change requires technical intervention and a new deployment.
+
+The proposal is to build the Back Office with an administrator role and move the
+per-organization configuration to the database. Environment variables would then
+hold only infrastructure settings and secrets.
