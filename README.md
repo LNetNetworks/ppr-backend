@@ -4,7 +4,6 @@ NestJS API for Pago por Resultado: projects advance through phases, verified
 evidence releases funds to the provider, and every movement of money is anchored
 on chain and audited.
 
-Spanish version: [README.es.md](README.es.md)
 
 ## Technology Stack
 
