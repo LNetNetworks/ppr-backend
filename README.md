@@ -1,6 +1,6 @@
 # PPR Backend
 
-NestJS API for Pago por Resultado: projects advance through phases, verified
+NestJS API for PPR (Pay-for-Results Program): projects advance through phases, verified
 evidence releases funds to the provider, and every movement of money is anchored
 on chain and audited.
 
